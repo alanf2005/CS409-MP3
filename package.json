@@ -21,9 +21,9 @@
     "url": "https://github.com/cs409-fa25/mp3.git"
   },
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "mongoose": "^9.0.0"
+    "dotenv": "^17.4.2",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
