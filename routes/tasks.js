@@ -18,7 +18,7 @@ router.delete('/:id', async (req, res) => {
     if (!task) throw new h.ApiError(404, 'Task not found');
     await User.updateMany({ pendingTasks: id }, { $pull: { pendingTasks: id } });
     await Task.deleteOne({ _id: task._id });
-    res.status(200).json({ message: 'Task deleted', data: task });
+    res.status(204).end();
   } catch (err) { h.handleError(res, err); }
 });
 
