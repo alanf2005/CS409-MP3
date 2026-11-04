@@ -18,7 +18,7 @@ router.delete('/:id', async (req, res) => {
     if (!user) throw new h.ApiError(404, 'User not found');
     await Task.updateMany({ assignedUser: id }, { $set: { assignedUser: '', assignedUserName: 'unassigned' } });
     await User.deleteOne({ _id: user._id });
-    res.status(200).json({ message: 'User deleted', data: user });
+    res.status(204).end();
   } catch (err) { h.handleError(res, err); }
 });
 
